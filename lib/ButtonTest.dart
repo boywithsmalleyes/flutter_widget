@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/MyIcon.dart';
 
 /**
  *
@@ -13,11 +14,11 @@ class ButtonTestWidget extends StatefulWidget {
 }
 
 class ButtonTestWidgetState extends State<ButtonTestWidget> {
+  String icons = "\uE914 \uE000 \uE90D";
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
-      height: 200,
       child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -52,7 +53,62 @@ class ButtonTestWidgetState extends State<ButtonTestWidget> {
             IconButton(
               icon: Icon(Icons.thumb_up),
               onPressed: () => {},
-            )
+            ),
+            Image(
+              image: AssetImage("images/WechatIMG15.jpeg"),
+              width: 100,
+            ),
+            Image.asset(
+              "images/WechatIMG15.jpeg",
+              width: 400,
+              height: 80,
+              fit: BoxFit.fitWidth,
+              color: Colors.blue[200],
+              colorBlendMode: BlendMode.darken,
+              repeat: ImageRepeat.repeatX,
+            ),
+            Text(
+              icons,
+              style: TextStyle(
+                  fontFamily: "MaterialIcons",
+                  fontSize: 24.0,
+                  color: Colors.green),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.accessibility,
+                  color: Colors.green,
+                ),
+                Icon(
+                  Icons.repeat,
+                  color: Colors.red,
+                ),
+                Icon(
+                  MyIcon.share,
+                  color: Colors.grey,
+                  size: 40,
+                  semanticLabel: "",
+                  textDirection: TextDirection.ltr,
+                )
+              ],
+            ),
+            Image(
+              image: NetworkImage(
+                "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+              ),
+              width: 100,
+            ),
+            Image.network(
+              "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+              width: 100,
+              height: 230,
+              color: Colors.blue,
+              colorBlendMode: BlendMode.difference,
+              repeat: ImageRepeat.repeatY,
+              fit: BoxFit.fitWidth,
+            ),
           ],
         ),
         widthFactor: 10,

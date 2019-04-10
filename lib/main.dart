@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/ButtonTest.dart';
+import 'package:flutter_widget/CheckBox.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      home: CounterWidget(initValue: 2,),
-      home: MyHomePage(title: "sss",),
+      home: MyHomePage(
+        title: "sss",
+      ),
 //      home: ParentWidgetPage(),
 //      home: CupertinoWidget(),
 //      home: TextTestWidget(),
@@ -77,7 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ButtonTestWidget(),
+//      body: ButtonTestWidget(),
+      body: CheckBox(),
 //      body: Center(
 //        // Center is a layout widget. It takes a single child and positions it
 //        // in the middle of the parent.
