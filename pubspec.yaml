@@ -45,6 +45,7 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   - images/WechatIMG15.jpeg
+  - images/t_pwd.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -60,7 +61,7 @@ flutter:
   fonts:
   - family: iconfont
     fonts:
-    - asset: asstes/iconfint.ttf
+    - asset: assets/iconfont.ttf
 #  fonts:
 #  - family: Raleway
 #    fonts:

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/CheckBox.dart';
+import 'package:flutter_widget/CustomTheme.dart';
+import 'package:flutter_widget/FormTest.dart';
+import 'package:flutter_widget/TextFiledTest.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,13 +25,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      home: CounterWidget(initValue: 2,),
-      home: MyHomePage(
-        title: "sss",
-      ),
+//      home: MyHomePage(
+//        title: "sss",
+//      ),
 //      home: ParentWidgetPage(),
 //      home: CupertinoWidget(),
 //      home: TextTestWidget(),
 //      home: ButtonTestWidget(),
+      home: FormTestWidget(),
     );
   }
 }
@@ -80,7 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 //      body: ButtonTestWidget(),
-      body: CheckBox(),
+//      body: CheckBox(),
+//      body: TextFiledTestWidget(),
+//      body: CustomThemeWidget(),
+      body: FormTestWidget(),
 //      body: Center(
 //        // Center is a layout widget. It takes a single child and positions it
 //        // in the middle of the parent.
