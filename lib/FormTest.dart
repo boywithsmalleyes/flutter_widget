@@ -34,10 +34,9 @@ class FormTestWidgetState extends State<FormTestWidget> {
               controller: _unameController,
               decoration: InputDecoration(
 //                labelText: "用户名",
-                hintText: "用户名或邮箱",
-                icon: Icon(Icons.person),
-                border: InputBorder.none
-              ),
+                  hintText: "用户名或邮箱",
+                  icon: Icon(Icons.person),
+                  border: InputBorder.none),
               validator: (v) {
                 return v.trim().length > 0 ? null : "用户名不能为空";
               },
@@ -49,7 +48,8 @@ class FormTestWidgetState extends State<FormTestWidget> {
               decoration: InputDecoration(
                   labelText: "密码", hintText: "登录密码", icon: Icon(Icons.lock)),
               validator: (v) {
-                v.trim().length > 5 ? null : "密码不能少于6位";
+                print(v);
+                return v.trim().length > 5 ? null : "密码不能少于6位";
               },
             ),
             Padding(
