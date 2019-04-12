@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/TapBoxC.dart';
+import 'package:flutter_widget/layoutwidget/TapBoxB.dart';
 
 /**
  *
  * @author wangxu
  * @date 19-4-10
  */
-class ParentCWidget extends StatefulWidget {
+class ParentWidgetPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return ParentCWidgetState();
+    return ParentWidgetPageState();
   }
 }
 
-class ParentCWidgetState extends State<ParentCWidget> {
+class ParentWidgetPageState extends State<ParentWidgetPage> {
   bool _active = false;
 
   void _handleTapboxChanged(bool newValue) {
@@ -25,7 +25,7 @@ class ParentCWidgetState extends State<ParentCWidget> {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      child: TapBoxCWidget(
+      child: TapBoxBPage(
         active: _active,
         onChanged: _handleTapboxChanged,
       ),

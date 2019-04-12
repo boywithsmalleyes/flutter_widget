@@ -57,6 +57,18 @@ class FormTestWidgetState extends State<FormTestWidget> {
               child: Row(
                 children: <Widget>[
                   Expanded(
+//                    child: RaisedButton(
+//                      onPressed: () {
+//                        if (((_formKey.currentState as FormState)).validate()) {
+//                          print("验证通过");
+//                        } else {
+//                          print('验证失败');
+//                        }
+//                      },
+//                      padding: EdgeInsets.all(15),
+//                      child: Text("登录"),
+//                      color: Theme.of(context).primaryColor,
+//                    ),
                     child: Builder(builder: (context) {
                       return RaisedButton(
                         onPressed: () {
