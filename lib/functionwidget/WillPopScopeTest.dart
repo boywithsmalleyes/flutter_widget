@@ -13,7 +13,7 @@ class WillPopScopeTest extends StatefulWidget {
 class _WillPopScopeTestState extends State<WillPopScopeTest> {
   @override
   Widget build(BuildContext context) {
-    DateTime _lastPressAt;º
+    DateTime _lastPressAt;
     return WillPopScope(
       child: Container(
         alignment: Alignment.bottomCenter,
