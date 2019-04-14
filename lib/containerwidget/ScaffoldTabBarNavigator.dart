@@ -38,15 +38,10 @@ class ScaffoldTabBarNavigatorState extends State<ScaffoldTabBarNavigator>
         title: Text("App name"),
         elevation: 2,
         bottom: TabBar(
-          tabs: tabs
-              .map((e) => Tab(
-                    text: e,
-                  ))
-              .toList(),
+          tabs: tabs.map((e) => Tab(text: e)).toList(),
           controller: _tabController,
         ),
         centerTitle: true,
-
         leading: Builder(builder: (context) {
           return IconButton(
             icon: Icon(
@@ -81,24 +76,53 @@ class ScaffoldTabBarNavigatorState extends State<ScaffoldTabBarNavigator>
               ),
             );
           }).toList()),
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            title: Text("Business"),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.school), title: Text("School")),
-        ],
-        currentIndex: _selectedIndex,
-        fixedColor: Colors.red,
-        onTap: _onItemTapped,
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        shape: CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.home),
+              onPressed: () {},
+            ),
+
+            SizedBox(),
+            IconButton(
+              icon: Icon(Icons.business),
+              onPressed: () {},
+            ),
+          ],
+        ),
       ),
+//      bottomNavigationBar: BottomNavigationBar(
+//        items: <BottomNavigationBarItem>[
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.home),
+//            title: Text("Home"),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.business),
+//            title: Text("Business"),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.school),
+//            title: Text("School"),
+//          ),
+//        ],
+//        currentIndex: _selectedIndex,
+//        fixedColor: Colors.red,
+//        onTap: _onItemTapped,
+//      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _onAdd,
         child: Icon(Icons.add),
+        backgroundColor: Colors.red,
+        elevation: 4,
+        clipBehavior: Clip.antiAlias,
+        isExtended: true,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 
@@ -120,28 +144,27 @@ class MyDrawer extends StatelessWidget {
           context: context,
           removeTop: true,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 38),
-                child: Row(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: ClipOval(
-                        child: Image.asset(
-                          "images/t_pwd.png",
-                          width: 80,
+                  padding: EdgeInsets.only(top: 38),
+                  child: Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: ClipOval(
+                          child: Image.asset(
+                            "images/t_pwd.png",
+                            width: 80,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      "Tony",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                )
-              ),
+                      Text(
+                        "Tony",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
               Expanded(
                 child: ListView(
                   children: <Widget>[
@@ -157,7 +180,6 @@ class MyDrawer extends StatelessWidget {
                 ),
               )
             ],
-
           )),
     );
   }
