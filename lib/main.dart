@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/animation/ScaleAnimationTest.dart';
 import 'package:flutter_widget/eventwidget/CustomNotification.dart';
 import 'package:flutter_widget/eventwidget/GestureTest.dart';
 import 'package:flutter_widget/eventwidget/NotificationTest.dart';
@@ -103,7 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //      body: PointerTest(),
 //      body: GestureTest(),
 //      body: NotificationTest(),
-      body: CustomNotification(),
+//      body: CustomNotification(),
+      body: ScaleAnimationTest(),
 //      body: Center(
 //        // Center is a layout widget. It takes a single child and positions it
 //        // in the middle of the parent.
