@@ -1,8 +1,6 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/animation/StaggerAnimationTest.dart';
-import 'package:flutter_widget/GobangTest/GobangBoard.dart';
-import 'package:flutter_widget/customwidget/GradientButton.dart';
-import 'package:flutter_widget/customwidget/TurnBox.dart';
 import 'package:flutter_widget/indicator/GradientCircularProgressIndicator.dart';
 
 // Created by Tony.wang on 19-4-16.
@@ -44,10 +42,19 @@ class StaggerDemoState extends State<StaggerDemo>
       child: Center(
           child: Column(
         children: <Widget>[
-          GobangBoard(),
-          GradientCircularProgressIndicator(
+//          GobangBoard(),
 
+          Center(
+            child: GradientCircularProgressIndicator(
+              stokeWidth: 5,
+              radius: 30,
+              value: 10.0,
+              strokeCapRound: true,
+              totalAngle: 2 * pi,
+              colors: [Colors.white, Colors.green, Colors.red],
+            ),
           ),
+
 //          Container(
 //            width: 300.0,
 //            height: 300.0,

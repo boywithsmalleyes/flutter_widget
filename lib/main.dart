@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/GobangTest/Gobang.dart';
-import 'package:flutter_widget/animation/HeroAnimationTest.dart';
-import 'package:flutter_widget/animation/ScaleAnimationTest.dart';
-import 'package:flutter_widget/animation/StaggerDemo.dart';
-import 'package:flutter_widget/eventwidget/CustomNotification.dart';
-import 'package:flutter_widget/eventwidget/GestureTest.dart';
-import 'package:flutter_widget/eventwidget/NotificationTest.dart';
+import 'package:flutter_widget/indicator/GradientCircularProgressRoute.dart';
 
 void main() => runApp(MyApp());
 
@@ -111,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //      body: CustomNotification(),
 //      body: ScaleAnimationTest(),
 //      body: StaggerDemo(),
-      body: Gobang(),
+      body: GradientCircularProgressRoute(),
+//      body: Gobang(),
 //      body: Center(
 //        // Center is a layout widget. It takes a single child and positions it
 //        // in the middle of the parent.
